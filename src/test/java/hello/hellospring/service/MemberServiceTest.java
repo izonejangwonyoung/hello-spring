@@ -20,17 +20,17 @@ class MemberServiceTest {
         memberRepository=new MemoryMemberRepository();
         memberService =new MemberService(memberRepository);
     }
-
     @AfterEach
     public void afterEach(){
         memberRepository.clearStore();
     }
+
     @Test
     void join() {
         //given
 
         Member member = new Member();
-        member.setName("최예나");
+        member.setName("spring");
 
         //when
         Long saveId= memberService.join(member);
